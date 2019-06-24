@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    transition-duration: 0.3s;
+}
+
+body {
+    margin: 0;
+}
+
+/* Setting the given font for all the titles that need it */
+.h1,
+h1,
+h2,
+h4 {
+    font-family: 'Merienda', cursive;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.navbar {
+    background-color: #061339;
+    color: white;
+}
+
+/* Putting a background image inside the jumbotron */
+.jumbotron {
+    margin-bottom: 0;
+    background-image: url('../img/background.jpg');
+    background-repeat: repeat;
+    color: white;
+    background-color: #B9CDFF;
+    text-align: center;
+}
+
+/* Drop shadow used for the 2 titles, one in the jumbotron and one in the carousel (cat names) */
+h1,
+h3 {
+    filter: drop-shadow(3px 3px 2px black);
+}
+
+/* Copied partly from the internet, making the default li of the carousel
+from bootstrap into squares and then applying a border radius to shape them
+into circles, then removing the background and adding a border */
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid white;
+}
+
+form {
+    padding: 10px;
+}
+
+main>section {
+    padding: 50px 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+h2,
+h4 {
+    color: #2F4073;
+}
+
+.btn {
+    width: 100%;
+}
+
+article>section+section {
+    margin-top: 10px;
+}
+
+main>section+section {
+    background-color: #dddddd;
+}
+
+figure {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+img {
+    background-color: #7885A5;
+}
+
+/* On hovering the section the cat head will change colour 
+achieved by changing the background color of the image block */
+main>section+section:hover img {
+    background-color: #061339;
+}
+
+/* Footer becomes display flex to put the text to the right and center vertically */
+footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 3rem;
+    color: white;
+    padding-right: 20px;
+    background-color: #061339;
+}
+
+h4 {
+    margin-bottom: 25px;
+}
+
+/* Media query for the desktop version */
+@media screen and (min-width: 1200px) {
+    .h1 {
+        margin-left: 20%;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    /* Putting the form and the carousel next to each other with row-reverse */
+    .bg-light>article {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
+    article>section+section {
+        width: 15%;
+        margin-right: 30px;
+    }
+
+    form {
+        font-size: 0.8rem;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .container>section {
+        margin-right: 20px;
+        width: 100%;
+    }
+
+    .container>section>h4 {
+        font-size: 1.8rem;
+    }
+}
